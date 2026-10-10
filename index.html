@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Squirm (SQUIRM): a tiny worm that feels the chart</title>
+<meta name="description" content="Squirm is a tiny worm in a glass aquarium with a hand wired toy brain. Buys are snacks, dumps taste salty. Pure meme. Not financial advice.">
+<meta property="og:title" content="Squirm (SQUIRM)">
+<meta property="og:description" content="A tiny worm with a toy brain that feels the chart. Buys are snacks, dumps taste salty.">
+<meta property="og:image" content="assets/banner.png">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#"><img src="assets/logo.png" alt="Squirm logo" width="40" height="40"><span>Squirm</span><b class="tick">SQUIRM</b></a>
+  <nav><a href="#what">What</a><a href="#buy">How to buy</a><a href="#ca">CA</a></nav>
+</header>
+
+<main>
+<section class="hero">
+  <h1>Squirm <span class="tick big">SQUIRM</span></h1>
+  <p class="pitch">A tiny worm with a toy brain that lives in a glass aquarium and feels the chart. Buys are snacks, dumps taste salty.</p>
+  <div class="btns">
+    <a class="btn pink" id="buyBtn" href="https://pump.fun" target="_blank" rel="noopener">Buy on pump.fun</a>
+    <a class="btn ghost" id="xBtn" href="https://x.com" target="_blank" rel="noopener">Follow on X</a>
+  </div>
+</section>
+
+<section class="lab" aria-label="Live worm aquarium">
+  <div class="dishwrap">
+    <div class="dishbar">
+      <span class="dot live" id="liveDot"></span><span id="modeLabel">test data (simulated)</span>
+      <span class="sep">·</span><span>watching <b id="day">1</b> min</span>
+      <span class="mood">mood: <b id="mood">curious</b></span>
+    </div>
+    <div id="stage" aria-label="3D glass aquarium with Squirm the worm">
+      <div class="viewhint" id="viewHint">drag to spin · pinch to zoom</div>
+      <div class="snacks">snacks eaten <b id="eaten">0</b></div>
+      <button class="enterbtn" id="enterBtn" type="button">Enter the room &rsaquo;</button>
+    </div>
+  </div>
+
+  <aside class="panel">
+    <div class="tabs" role="tablist">
+      <button class="on" data-tab="senses">Senses</button>
+      <button data-tab="brain">Brain</button>
+      <button data-tab="log">Diary</button>
+    </div>
+    <div class="tab on" id="tab-senses">
+      <div class="growth">
+        <div class="grow-row"><span>Market cap</span><b id="mcVal">n/a</b></div>
+        <div class="grow-row"><span>Tank size</span><b>Level <span id="lvVal">1</span>, next growth at <span id="nextVal">$15k</span> (3x)</b></div>
+        <div class="bar"><i id="lvBar" style="background:#FFD23F;width:0"></i></div>
+      </div>
+      <p class="hint">Every second Squirm reads the market through four senses. Higher number, stronger feeling.</p>
+      <div id="senses"></div>
+      <h4>What the worm does about it</h4>
+      <div id="outputs"></div>
+    </div>
+    <div class="tab" id="tab-brain">
+      <p class="hint">Squirm runs on a little toy nervous system we wired by hand: four sense cells, four action cells, some weights, a bit of leak so feelings fade. No AI, no training, not a real lab simulation. Just a cute worm doing its best.</p>
+      <ul class="wiring">
+        <li><b>Snacks</b> boost Appetite and Glow</li>
+        <li><b>Salt</b> boosts Sulk and slows Wiggle</li>
+        <li><b>Vibes</b> boost Wiggle and Glow</li>
+        <li><b>Sunshine</b> boosts everything a little</li>
+      </ul>
+    </div>
+    <div class="tab" id="tab-log"><ol id="diary"></ol></div>
+  </aside>
+</section>
+
+<section id="what" class="card">
+  <h2>What is Squirm?</h2>
+  <p>Squirm is a meme coin with a pet. A small pink worm lives in a glass aquarium on this page. Its feelings are driven by the coin: buys drop snacks into the tank, sells make the sand taste salty, posts give it good vibes and a rising chart feels like sunshine. Every time the market cap reaches another 3x, the tank, the worm and its three statue friends grow a level. Open the page and see how the worm is doing.</p>
+  <p>It is pure fun. No roadmap, no promises, no utility beyond keeping a worm happy.</p>
+</section>
+
+<section id="buy" class="card">
+  <h2>How to buy</h2>
+  <ol class="steps">
+    <li><b>Get a wallet.</b> Install Phantom or Solflare.</li>
+    <li><b>Add SOL.</b> Buy SOL on an exchange and send it to your wallet.</li>
+    <li><b>Open pump.fun.</b> Use the button above or paste the CA below.</li>
+    <li><b>Swap for SQUIRM.</b> Pick an amount, confirm, and feed the worm.</li>
+  </ol>
+</section>
+
+<section id="ca" class="card cabox">
+  <h2>Contract address</h2>
+  <div class="carow"><code id="caText">CA coming soon</code><button id="copyBtn" class="btn pink small">Copy</button></div>
+  <p class="hint">Always check the CA here or in the pinned post on X.</p>
+</section>
+</main>
+
+<footer>
+  <img src="assets/logo.png" alt="" width="32" height="32">
+  <p>Squirm is a meme coin with no intrinsic value or expectation of financial return. Crypto is risky. <b>Not financial advice.</b></p>
+</footer>
+<div class="gate" id="gate" hidden role="dialog" aria-modal="true" aria-labelledby="gateTitle">
+  <div class="gatebox">
+    <button class="close" id="gateClose" type="button" aria-label="Close">&times;</button>
+    <h3 id="gateTitle">Enter the room</h3>
+    <p>Holders can walk into the room as a little worm-buddy, wander around the tank and say hi to the legends.</p>
+    <div id="gateTest"></div>
+    <div class="btns" id="gateBtns"></div>
+    <div class="status" id="gateStatus"></div>
+    <p class="note">We only read your public address to check your balance. We never ask you to sign anything.</p>
+  </div>
+</div>
+<script src="assets/vendor/three.min.js"></script>
+<script src="assets/vendor/OrbitControls.js"></script>
+<script src="assets/vendor/RoomEnvironment.js"></script>
+<script src="assets/scene3d.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
